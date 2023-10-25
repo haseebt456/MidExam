@@ -22,5 +22,12 @@ function Add()
 
 function expandCard()
 {
-    console.log(this);
+    var cards = document.querySelectorAll('.faq');
+    for(let i=0; i < cards.length ; i++)
+    {
+        cards[i].addEventListener("click",function(){
+            document.body.style.backgroundColor='black';
+            cards[i].classList.toggle('active');
+        });
+    }
 }
