@@ -19,3 +19,8 @@ function Add()
     card.setAttribute("class","faq");
     cont.appendChild(card);
 }
+
+function expandCard()
+{
+    console.log(this);
+}
