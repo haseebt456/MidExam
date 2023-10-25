@@ -20,14 +20,14 @@ function Add()
     cont.appendChild(card);
 }
 
-function expandCard()
-{
     var cards = document.querySelectorAll('.faq');
     for(let i=0; i < cards.length ; i++)
     {
         cards[i].addEventListener("click",function(){
             document.body.style.backgroundColor='black';
             cards[i].classList.toggle('active');
-        });
-    }
-}
+            var button=cards[i].childNodes[5];
+            button.addEventListener("click",function(){
+                document.body.style.backgroundColor = 'none';
+                button.parentElement.remove();
+            })
